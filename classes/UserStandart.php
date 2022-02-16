@@ -1,6 +1,6 @@
 <?php 
-require_once __DIR__ . '/UserType.php';
-  class UserStandart extends UserType 
+require_once __DIR__ . '/User.php';
+  class UserStandart extends User
   {
     public $status = 'Standart';
     
@@ -33,7 +33,7 @@ require_once __DIR__ . '/UserType.php';
     public function setSconto($status)
     {
       if ($status === 'Standart') {
-        $this->sales = 0;
+        $this->sales = 10;
       }
     }
   }

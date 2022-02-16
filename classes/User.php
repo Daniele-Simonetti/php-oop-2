@@ -1,7 +1,7 @@
 <?php 
 require_once __DIR__ . '/UserPrime.php';
 require_once __DIR__ . '/UserStandart.php';
-class UserType
+class User
 {
   protected $name;
   protected $lastName;

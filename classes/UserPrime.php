@@ -1,6 +1,6 @@
 <?php 
-require_once __DIR__ . '/UserType.php';
-  class UserPrime extends UserType 
+require_once __DIR__ . '/User.php';
+  class UserPrime extends User
   {
     protected $status = 'Prime';
     
