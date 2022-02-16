@@ -12,34 +12,6 @@ class UserType
     $this->name = $name;
     $this->status = $lastName;
   }
-  /**
-   * Get the value of status
-   */ 
-  public function getStatus()
-  {
-    return $this->status;
-  }
-
-  /**
-   * Set the value of status
-   *
-   * @return  self
-   */ 
-  public function setStatus($status)
-  {
-    $this->status = $status;
-
-    return $this;
-  }
-
-  public function setSconto($status)
-  {
-    if ($status === 'Prime') {
-      $this->sales = 30;
-    } else if ($status === 'Standart') {
-      $this->sales = 0;
-    } 
-  }
 
   /**
    * Get the value of name
@@ -85,6 +57,13 @@ class UserType
   public function getFullName()
   {
     return $this->name . ' ' . $this->lastName;
+  }
+
+  public function setSconto($status) 
+  {
+    if ($status === 'Prime') {
+      $this->sales = 30;
+    }
   }
 }
 ?>

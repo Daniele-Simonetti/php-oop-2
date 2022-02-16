@@ -3,10 +3,12 @@ require_once __DIR__ . '/UserType.php';
   class UserPrime extends UserType 
   {
     public $status = 'Prime';
+    
     public function __construct($name, $lastName, $status)
     {
       parent::__construct($name, $lastName);
       $this->status = $status;
+      $this->setSconto($status);
     }
 
     /**
@@ -27,6 +29,12 @@ require_once __DIR__ . '/UserType.php';
         $this->status = $status;
 
         return $this;
+    }
+    public function setSconto($status)
+    {
+      if ($status === 'Prime') {
+        $this->sales = 30;
+      }
     }
   }
 ?>
