@@ -3,15 +3,12 @@ class User
 {
   protected $name;
   protected $lastName;
-  protected $email;
-  protected $phoneNumber;
   protected $sales = 0;
 
-  public function __construct($name, $lastName, $email)
+  public function __construct($name, $lastName)
   {
     $this->name = $name;
     $this->lastName = $lastName;
-    $this->email = $email;
   }
 
   /**
@@ -57,46 +54,6 @@ class User
   public function getFullName()
   {
     return $this->name . ' ' . $this->lastName;
-  }
-
-  /**
-   * Get the value of email
-   */ 
-  public function getEmail()
-  {
-    return $this->email;
-  }
-
-  /**
-   * Set the value of email
-   *
-   * @return  self
-   */ 
-  public function setEmail($email)
-  {
-    $this->email = $email;
-
-    return $this;
-  }
-
-  /**
-   * Get the value of phoneNumber
-   */ 
-  public function getPhoneNumber()
-  {
-    return $this->phoneNumber;
-  }
-
-  /**
-   * Set the value of phoneNumber
-   *
-   * @return  self
-   */ 
-  public function setPhoneNumber($phoneNumber)
-  {
-    $this->phoneNumber = $phoneNumber;
-
-    return $this;
   }
 }
 ?>
