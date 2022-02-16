@@ -6,7 +6,7 @@ require_once __DIR__ . '/classes/Products.php';
 
 try {
   // $firstUser = new User('Daniele', 'Lanillotto', 'danisimo99.ds@gmail.com');
-  $firstUser = new UserType('Daniele', 'Amato', 'Prime');
+  $firstUser = new UserType('Daniele', 'Amato', 'Standart');
   var_dump($firstUser);
 
   echo $firstUser->getFullName();
