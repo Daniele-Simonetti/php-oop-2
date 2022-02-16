@@ -1,26 +1,20 @@
 
 <?php 
-require_once __DIR__ . '/classes/Users.php';
+require_once __DIR__ . '/classes/UserType.php';
 require_once __DIR__ . '/classes/Products.php';
 
-$firstUser = new UserType('Daniele', 'Amato');
-var_dump($firstUser)
 
-// try {
-//   $firstUser = new User('Daniele', 'Lanillotto', 'danisimo99.ds@gmail.com');
+try {
+  // $firstUser = new User('Daniele', 'Lanillotto', 'danisimo99.ds@gmail.com');
+  $firstUser = new UserType('Daniele', 'Amato', 'Prime');
+  var_dump($firstUser);
 
-//   $firstProduct = new Product('penna a sfera', 10);
+  echo $firstUser->getFullName();
 
-//   // echo $firstUser->getFullName();
 
-//   // echo $firstUser->getEmail();
+} catch (Exception $error) {
 
-//   var_dump($firstUser);
-//   var_dump($firstProduct);
+  echo $error->getMessage();
 
-// } catch (Exception $error) {
-
-//   echo $error->getMessage();
-
-// }
+}
 ?>
