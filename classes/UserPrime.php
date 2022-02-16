@@ -2,7 +2,7 @@
 require_once __DIR__ . '/UserType.php';
   class UserPrime extends UserType 
   {
-    public $status = 'Prime';
+    protected $status = 'Prime';
     
     public function __construct($name, $lastName, $status)
     {
